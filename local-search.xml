@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>基于hexo+github的博客自建详细教程</title>
+    <link href="/2020/01/29/%E5%9F%BA%E4%BA%8Ehexo-github%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
+    <url>/2020/01/29/%E5%9F%BA%E4%BA%8Ehexo-github%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前期准备："><a href="#前期准备：" class="headerlink" title="前期准备："></a>前期准备：</h1><blockquote><ol><li>安装<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a></li><li>安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li><li>安装一个文本编辑器（根据自己的需求安装，自用Sublime Text3）</li></ol></blockquote><h1 id="hexo安装详细步骤：（windows按安装步骤）"><a href="#hexo安装详细步骤：（windows按安装步骤）" class="headerlink" title="hexo安装详细步骤：（windows按安装步骤）"></a>hexo安装详细步骤：（windows按安装步骤）</h1><pre><code>npm install hexo-cli -g本地创建一个文件夹，此处以blog为例进入到blog目录下hexo init blognpm installhexo s打开浏览器127.0.0.1：4000，出现hexo页面，如图（页面不是我这个主题，能成功打开即可）</code></pre><p><img src="/2020/01/29/%E5%9F%BA%E4%BA%8Ehexo-github%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%87%AA%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/1.jpg" srcset="/img/loading.gif" alt="result"></p><h1 id="hexo使用详细说明："><a href="#hexo使用详细说明：" class="headerlink" title="hexo使用详细说明："></a>hexo使用详细说明：</h1><pre><code>hexo n &quot;name&quot;用文本编辑器编辑页面（附Markdown 语法说明） hexo ghexo s打开127.0.0.1:4000hexo d(上传到github上，后续讲解)</code></pre><p><a href="https://pan.baidu.com/s/1iEJX0Re0ET9WCn3v1sBoAA" target="_blank" rel="noopener">Markdown 语法说明</a></p><h1 id="hexo上载到github详细教程："><a href="#hexo上载到github详细教程：" class="headerlink" title="hexo上载到github详细教程："></a>hexo上载到github详细教程：</h1><pre><code>在blog下安装部署插件：cpm install --save hexo-deployer修改_config.yml配置文件，如下        # Deployment        ## Docs: https://hexo.io/docs/deployment.html        deploy:            type: git            repo: https://github.com/gjxvictory/gjxvictory.github.io.git(git仓库连接)            babranch: masterhexo d</code></pre><h1 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h1><pre><code>在hexo官网下载主题，解压到\blog\themes中修改_config.yml配置文件，如下        theme: fluid</code></pre><h1 id="在hexo中插入图片："><a href="#在hexo中插入图片：" class="headerlink" title="在hexo中插入图片："></a>在hexo中插入图片：</h1><pre><code>npm install hexo-asset-image --save修改_config.yml配置文件，如下        post_asset_folder: true将图片放入\blog\source\_posts的同名文件夹下Markdown语法：![你想输入的替代文字](图片名.jpg)</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Markdown基础语法</title>
+    <link href="/2020/01/28/HelloWorld/"/>
+    <url>/2020/01/28/HelloWorld/</url>
+    
+    <content type="html"><![CDATA[<p>#标题</p><p>##类Setext</p><blockquote><h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title=" This is an H2"></a> This is an H2</h2></blockquote><p>##类atx</p><blockquote><h1 id="This-is-H1"><a href="#This-is-H1" class="headerlink" title="This is H1"></a>This is H1</h1><h2 id="This-is-H2"><a href="#This-is-H2" class="headerlink" title="This is H2"></a>This is H2</h2><h3 id="This-is-H3"><a href="#This-is-H3" class="headerlink" title="This is H3"></a>This is H3</h3><h6 id="This-is-H6"><a href="#This-is-H6" class="headerlink" title="This is H6"></a>This is H6</h6></blockquote><p>#代码高亮</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">classs <span class="title">hello</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>#区块应用Blockqutes</p><ol><li><blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</p></blockquote></li><li><blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</p></blockquote></li><li><blockquote><p>This is the first level of quoting.</p><blockquote><p>This is nested blockquote.</p></blockquote><blockquote><p>Back to the first level.</p></blockquote></blockquote></li><li><blockquote><h2 id="这是一个标题。"><a href="#这是一个标题。" class="headerlink" title="这是一个标题。"></a>这是一个标题。</h2><ol><li>这是第一行列表项。</li><li>这是第二行列表项。<br>给出一些例子代码：<blockquote><p>return shell_exec(“echo $input | $markdown_script”);</p></blockquote></li></ol></blockquote></li></ol><p>#列表</p><ol><li><p>无序列表</p><blockquote><ul><li>red</li><li>green</li></ul></blockquote><hr><blockquote><ul><li>red</li><li>green</li></ul></blockquote><hr><blockquote><ul><li>red</li><li>green</li></ul></blockquote></li><li><p>有序列表</p><blockquote><ol><li>red<ol start="2"><li>green</li><li>blue</li></ol></li></ol></blockquote></li><li><p>shjdfhdjsfh<br>dsjfhjkd<br>fjkdhsf</p><p>sjdfhdjs<br>sdjfhkds<br>jkdsfhjs</p></li></ol><p><a href="https://baidu.com" target="_blank" rel="noopener" title="百度">https://baidu.com</a><br><a href="https://baidu.com" target="_blank" rel="noopener" title="ddd">example</a><br><a href="https://baidu.com" target="_blank" rel="noopener">https://baidu.com</a></p><p><em>11111</em><br><strong><strong>22222</strong></strong><br><em>11111</em><br><strong>22222</strong></p><p>This is a <code>printf(&quot;haha&quot;);</code></p><p><code>123`456</code></p><p>![Alt text][1]<br>[1]:url/to/image</p><p>*literal asterisks*</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>开始</tag>
+      
+      <tag>日志</tag>
+      
+      <tag>111</tag>
+      
+      <tag>222</tag>
+      
+      <tag>333</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
